@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './NavBar';
+import React, {useState} from 'react'
+import { Routes, Route } from 'react-router-dom';
+import SignIn from './Forms/SignIn';
+import SignUp from './Forms/SignUp';
+import SignOut from './Forms/SignOut';
+import HomePage from './HomePage';
 
 function App() {
+  const [userSignedIn, setUserSignedIn] = useState(localStorage.getItem('user'))
+  const [accessToken, setAccessToken] = useState(localStorage.getItem('access_token'))
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar userSignedIn={userSignedIn} accessToken={accessToken}/>
+      <Routes>
+        <Route path='/signin' element={<SignIn setUserSignedIn={setUserSignedIn} setAccessToken={setAccessToken}/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/signout' element={<SignOut setUserSignedIn={setUserSignedIn} setAccessToken={setAccessToken}/>}/>
+        <Route path='/' element={<HomePage/>}/>
+      </Routes> 
     </div>
   );
 }
