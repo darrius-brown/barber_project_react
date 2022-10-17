@@ -36,12 +36,10 @@ function SignUp({setUserSignedIn}){
     }
     
   postSignUp({
-    game: 'Simon',
     username: formInfo.username,
     password: formInfo.password,
-    
     })
-  navigate('/signin')
+  // navigate('/signin')
 
 
   }

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export function postSignUp(content) {
-    const URL = `https://play-squared.herokuapp.com/signup/`
+    const URL = `https://localhost:8000/signup`
     const {username, password} = content 
       return axios.post(URL, {
         username: username,

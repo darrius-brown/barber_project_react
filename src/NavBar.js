@@ -6,9 +6,12 @@ import { Link } from 'react-router-dom'
 
 function NavBar(userSignedIn, accessToken) {
   return (
-    <Navbar bg="dark" variant="dark" className='position-absolute top-0 end-50 mt-4'>
-     <Container>
+    <>
+    <Navbar bg="dark" variant="dark" className='top-0 end-0'>
+    <Container>
        <Navbar.Brand className='navbar-play'>BarbMe</Navbar.Brand>
+     </Container>
+     <Container>
        <Nav className="me-auto">
          <Nav.Link>
          <Link to='/' style={{ color: 'inherit', textDecoration: 'inherit'}}>
@@ -36,10 +39,22 @@ function NavBar(userSignedIn, accessToken) {
          </Link>
          }
          </Nav.Link>
+         <Nav.Link>
+       {userSignedIn.accessToken  ? 
+         <Link to='/signout' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+            <h5> </h5>
+         </Link>
+         :
+         <Link to='/signup' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+            <h5>Sign up</h5>
+         </Link>
+         }
+         </Nav.Link>
 
        </Nav>
      </Container>
    </Navbar>
+   </>
   )
 }
 
