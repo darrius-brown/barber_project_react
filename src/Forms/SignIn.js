@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 function SignIn({ setUserSignedIn, setAccessToken }) {
     const navigate = useNavigate()
-    const loginEndpoint = 'https://play-squared.herokuapp.com/api/token/'
+    const loginEndpoint = 'http://localhost:8000/api/token/'
     const initialState = { username: '', password: '' }
     const [formState, setFormState] = useState(initialState)
     const [networkErrMsg, setNetworkErrMsg] = useState(null)
