@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.barber-img{
+  border-radius: 100%;
+  width: 4rem
+}
+
+.barber-card{
+  margin: auto;
+  width: 30%;
+  border: 0.4rem solid green;
+}
