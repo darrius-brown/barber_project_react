@@ -36,6 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.barber {
+  display: flex; 
+  justify-content: center;
+  
+}
+
+.barber-info {
+  align-self: flex-start;
+  margin-top: 2rem;
+}
 
 .barber-img{
   border-radius: 100%;
@@ -43,9 +53,12 @@
 }
 
 .barber-card{
-  margin: auto;
-  width: 30%;
-  border: 0.4rem solid rgb(57, 54, 54);
+  border: 0.2rem solid rgb(57, 54, 54);
   margin-top: 2rem;
   margin-bottom: 6rem;
 }
+
+.listgroup {
+  font-size: 20px;
+}
+
