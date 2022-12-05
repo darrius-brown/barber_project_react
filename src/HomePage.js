@@ -16,7 +16,7 @@ function HomePage(accessToken) {
   }
 
   const storeImages = () => {
-    const imageStorage = {}
+    const imageStorage = Array(2).fill(0)
 
     for (let i = 0; i < database.length; i++){
       imageStorage[`${i}`] = 1
@@ -25,8 +25,13 @@ function HomePage(accessToken) {
     setImages(imageStorage)
   }
 
-  const nextImage = () => {
-    
+  const nextImage = (imageArrayLength, index) => {
+    let copyImages = [...images]
+    copyImages[index] += 1
+    if(copyImages[index] % imageArrayLength === 0) {
+      copyImages[index] = 0
+    }
+    setImages(copyImages)
   }
 
   useEffect(() => {
@@ -56,7 +61,7 @@ function HomePage(accessToken) {
               
               <Button 
               variant="primary"
-              onClick={() => {nextImage(barber.haircut_images.length)}}
+              onClick={() => {nextImage(barber.haircut_images.length, index)}}
               >Next Image  </Button>
             </Card.Body>
           </Card>
