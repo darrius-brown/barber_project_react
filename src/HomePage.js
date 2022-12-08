@@ -38,13 +38,7 @@ function HomePage(accessToken) {
     return database.map((barber, index) => {
       return (
         <div className='barber'>
-          <Card className='barber-info' style={{ width: '18rem' }}>
-            <ListGroup variant="flush">
-              <ListGroup.Item className='listgroup'>Price: ${barber.price}</ListGroup.Item>
-              <ListGroup.Item className='listgroup'>Location: {barber.city}, {barber.state}</ListGroup.Item>
-              <ListGroup.Item className='listgroup'>Rating: {barber.ratings}/5</ListGroup.Item>
-            </ListGroup>
-          </Card>
+          
           <div className='barber-card'>
             <Card style={{ width: '35rem' }}>
             <Card.Body>
@@ -63,6 +57,15 @@ function HomePage(accessToken) {
               </Card.Body>
             </Card>
           </div>
+          <Card className='barber-info' style={{ width: '18rem' }}>
+            <ListGroup variant="flush">
+              {/* <ListGroup.Item className='listgroup'>Price: ${barber.price}</ListGroup.Item> */}
+              <ListGroup.Item className='listgroup'>Location: {barber.city}, {barber.state}</ListGroup.Item>
+              <ListGroup.Item className='listgroup'>Rating: {barber.ratings}/5</ListGroup.Item>
+              <ListGroup.Item className='listgroup'>Contact: {barber.contact}</ListGroup.Item>
+              <ListGroup.Item className='listgroup'>Book an appointment: <a rel="noreferrer" target="_blank" href={barber.website == "N/A" ? null : 'https://' + barber.website}>{barber.website}</a></ListGroup.Item>
+            </ListGroup>
+          </Card>
         </div>
       )
     })

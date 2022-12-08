@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function NavBar(userSignedIn, accessToken) {
   return (
     <>
-    <Navbar bg="dark" variant="dark" className='top-0 end-0'>
+    <Navbar bg="dark" variant="dark" className='top-0 end-0 fixed-top'>
     <Container>
        <Navbar.Brand className='navbar-play'>BarbMe</Navbar.Brand>
      </Container>

@@ -44,7 +44,7 @@
 
 .barber-info {
   align-self: flex-start;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 .barber-img{
@@ -54,11 +54,19 @@
 
 .barber-card{
   border: 0.2rem solid rgb(57, 54, 54);
-  margin-top: 2rem;
-  margin-bottom: 6rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.barber-cut{
+  height: 60vh;
+  vertical-align: top;
 }
 
 .listgroup {
   font-size: 20px;
 }
 
+.hidden {
+  display: none;
+}
