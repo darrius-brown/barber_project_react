@@ -2,40 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .barber {
   display: flex; 
   justify-content: center;
@@ -52,10 +18,16 @@
   width: 4rem
 }
 
+.card-body {
+  background-color: rgb(82, 64, 51);
+}
+
 .barber-card{
-  border: 0.2rem solid rgb(57, 54, 54);
+  border: 0.2rem solid rgb(0, 0, 0);
   margin-top: 5rem;
   margin-bottom: 1rem;
+  height: 100%;
+  color: white;
 }
 
 .barber-cut{
@@ -63,10 +35,15 @@
   vertical-align: top;
 }
 
-.listgroup {
-  font-size: 20px;
-}
+
 
 .hidden {
   display: none;
+}
+
+.bg-image {
+  background-image: url('C:\Users\Darrius\my-code\barber_project_react\src\Images\Untitled design.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

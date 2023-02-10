@@ -37,7 +37,7 @@ function HomePage(accessToken) {
   const renderBarbers = () => {
     return database.map((barber, index) => {
       return (
-        <div className='barber'>
+        <div className='barber bg-image'>
           
           <div className='barber-card'>
             <Card style={{ width: '35rem' }}>
@@ -57,7 +57,7 @@ function HomePage(accessToken) {
               </Card.Body>
             </Card>
           </div>
-          <Card className='barber-info' style={{ width: '18rem' }}>
+          <Card className='barber-info' border='dark' style={{ width: '18rem' }}>
             <ListGroup variant="flush">
               {/* <ListGroup.Item className='listgroup'>Price: ${barber.price}</ListGroup.Item> */}
               <ListGroup.Item className='listgroup'>Location: {barber.city}, {barber.state}</ListGroup.Item>
