@@ -14,7 +14,7 @@ This website was created using React.js and React Bootstrap.
 ## Future work
 -----------
 
-* Pagination when the database gets larger.
+* Pagination when the database gets larger
 * Create message functionality between barber and user
-* Create Favorite Functionality where the user can add a barber to their favorites.
+* Create Favorite Functionality where the user can add a barber to their favorites
 * Detail CSS
