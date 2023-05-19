@@ -51,19 +51,19 @@ function HomePage(accessToken) {
                 <Card.Text>{barber.description}</Card.Text>
                 
                 <Button 
-                variant="primary"
+                variant="success"
                 onClick={() => {nextImage(barber.haircut_images.length, index)}}
                 >Next Image  </Button>
               </Card.Body>
             </Card>
           </div>
-          <Card className='barber-info' border='dark' style={{ width: '18rem' }}>
+          <Card className='barber-info' style={{ width: '18rem'}} >
             <ListGroup variant="flush">
               {/* <ListGroup.Item className='listgroup'>Price: ${barber.price}</ListGroup.Item> */}
-              <ListGroup.Item className='listgroup'>Location: {barber.city}, {barber.state}</ListGroup.Item>
-              <ListGroup.Item className='listgroup'>Rating: {barber.ratings}/5</ListGroup.Item>
-              <ListGroup.Item className='listgroup'>Contact: {barber.contact}</ListGroup.Item>
-              <ListGroup.Item className='listgroup'>Book an appointment: <a rel="noreferrer" target="_blank" href={barber.website == "N/A" ? null : 'https://' + barber.website}>{barber.website}</a></ListGroup.Item>
+              <ListGroup.Item className='listgroup list-group-item-dark'>Location: {barber.city}, {barber.state}</ListGroup.Item>
+              {/* <ListGroup.Item className='listgroup list-group-item-dark'>Rating: {barber.ratings}/5</ListGroup.Item> */}
+              <ListGroup.Item className='listgroup list-group-item-dark'>Contact: {barber.contact}</ListGroup.Item>
+              <ListGroup.Item className='listgroup list-group-item-dark'>Book an appointment: <a rel="noreferrer" target="_blank" href={barber.website == "N/A" ? null : 'https://' + barber.website}>{barber.website}</a></ListGroup.Item>
             </ListGroup>
           </Card>
         </div>

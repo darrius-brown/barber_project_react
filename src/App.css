@@ -1,11 +1,11 @@
 .App {
   text-align: center;
+  font-family: Trebuchet MS;
 }
 
 .barber {
   display: flex; 
-  justify-content: center;
-  
+  justify-content: center; 
 }
 
 .barber-info {
@@ -35,8 +35,6 @@
   vertical-align: top;
 }
 
-
-
 .hidden {
   display: none;
 }
@@ -47,3 +45,4 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+

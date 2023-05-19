@@ -11,24 +11,24 @@ function NavBar(userSignedIn, accessToken) {
     <Container>
        <Navbar.Brand className='navbar-play'>BarbMe</Navbar.Brand>
      </Container>
-     <Container>
-       <Nav className="me-auto">
+     {/* <Container> */}
+       {/* <Nav className="me-auto">
          <Nav.Link>
          <Link to='/' style={{ color: 'inherit', textDecoration: 'inherit'}}>
             <h5>Home</h5>
          </Link>
          </Nav.Link>
          <Nav.Link>
-         <Link to='/leaderboard' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+         <Link to='/favorites' style={{ color: 'inherit', textDecoration: 'inherit'}}>
             <h5>Favorites</h5>
          </Link>
          </Nav.Link>
          <Nav.Link>
-         <Link to='/gamerec' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+         <Link to='/messages' style={{ color: 'inherit', textDecoration: 'inherit'}}>
             <h5>Messages</h5>
          </Link>
-         </Nav.Link>
-         <Nav.Link>
+         </Nav.Link> */}
+         {/* <Nav.Link>
        {userSignedIn.accessToken  ? 
          <Link to='/signout' style={{ color: 'inherit', textDecoration: 'inherit'}}>
             <h5>Sign Out</h5>
@@ -49,10 +49,10 @@ function NavBar(userSignedIn, accessToken) {
             <h5>Sign up</h5>
          </Link>
          }
-         </Nav.Link>
+         </Nav.Link> */}
 
-       </Nav>
-     </Container>
+       {/* </Nav>
+     </Container> */}
    </Navbar>
    </>
   )
