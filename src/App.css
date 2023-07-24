@@ -40,7 +40,7 @@
 }
 
 .bg-image {
-  background-image: url('C:\Users\Darrius\my-code\barber_project_react\src\Images\Untitled design.png');
+  background-image: url('src/Images/Untitled design.png');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
