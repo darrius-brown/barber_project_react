@@ -71,6 +71,10 @@
     max-width: 80px;
     max-height: 80px;
   }
+
+  .bg-image {
+    display: none;
+  }
   
 
 }
