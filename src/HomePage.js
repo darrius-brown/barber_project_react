@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -112,10 +112,29 @@ function HomePage(accessToken) {
     setImages(copyImages)
   }
 
+    // State to track the current window width
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    // Function to update window width on window resize
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+  
+    // useEffect to add and remove the event listener for window resize
+    useEffect(() => {
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+  
+    // Conditionally set the class name based on windowWidth
+    const barberClassName = windowWidth <= 767 ? 'barber' : 'barber bg-image';
+
   const renderBarbers = () => {
     return database.map((barber, index) => {
       return (
-        <div className='barber bg-image'>
+        <div className={barberClassName}>
           
           <div className='barber-card'>
             <Card style={{ width: '35rem' }}>
