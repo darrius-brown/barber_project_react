@@ -48,27 +48,29 @@
 
 @media (max-width: 767px) {
   .barber {
-    margin-bottom: 20px; /* Add some space between the cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the card content horizontally */
   }
 
   .barber-card {
-    max-width: 90%; /* Reduce the card width to fit within the screen */
-    margin: 0 auto; /* Center the cards horizontally */
+    margin-bottom: 10px;
+    max-width: 75%; /* Reduce the card width to fit within the screen */
   }
 
   .barber-info {
-    width: 100%; /* Take the full width of the screen */
-    margin-top: 10px; /* Add some space between the cards and info section */
+    width: 90%; /* Reduce the info card width to fit within the screen */
+    margin: 5px auto; /* Add some space and center the info card */
   }
 
   .barber-cut {
-    width: 100%;
+    width: 75%;
     height: auto;
   }
 
   .barber-img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 75px;
+    max-height: 75px;
   }
 
   /* Add the background image to the .bg-image class */
@@ -80,5 +82,4 @@
     height: 250px; /* Set the height to control the size of the background image */
   }
 }
-
 
