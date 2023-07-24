@@ -80,7 +80,7 @@
     height: 100%;
     background-image: url('Images/1.png');
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover; 
     z-index: -1; 
   }
