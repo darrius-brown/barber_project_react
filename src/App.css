@@ -50,30 +50,27 @@
   .barber {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the card content horizontally */
   }
 
   .barber-card {
-    margin-bottom: 10px;
-    max-width: 75%; /* Reduce the card width to fit within the screen */
+    margin-bottom: 20px;
   }
 
   .barber-info {
-    width: 90%; /* Reduce the info card width to fit within the screen */
-    margin: 5px auto; /* Add some space and center the info card */
+    width: 100%;
+    margin: 0;
   }
 
   .barber-cut {
-    width: 75%;
+    width: 100%;
     height: auto;
   }
 
   .barber-img {
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 100px;
+    max-height: 100px;
   }
 
-  /* Add the background image to the .bg-image class */
   .bg-image {
     background-position: center;
     background-repeat: no-repeat;
