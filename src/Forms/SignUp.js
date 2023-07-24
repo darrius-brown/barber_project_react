@@ -2,13 +2,9 @@ import React, {useState} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
-import {useNavigate} from 'react-router-dom';
 import {postSignUp} from '../api/forms.js'
 
 function SignUp({setUserSignedIn}){
-
-  const navigate = useNavigate()
-
   const [formInfo, setFormInfo] = useState({username:'', password:''})
   const [networkErrMsg, setNetworkErrMsg] = useState(null)
   const [clientErrMsg, setClientErrMsg] = useState(null)

@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup';
 
 function HomePage(accessToken) {
-  const [database, setDatabase] = useState([
+  const database = [
     {
         "name": "Christian Alverez",
         "state": "California",
@@ -100,7 +100,7 @@ function HomePage(accessToken) {
         "contact": "(951) 666-1963",
         "website": "andrew1of1.booksy.com"
     }
-])
+]
   const [images, setImages] = useState(Array(100).fill(0))
 
   const nextImage = (imageArrayLength, index) => {
@@ -141,7 +141,7 @@ function HomePage(accessToken) {
               <ListGroup.Item className='listgroup list-group-item-dark'>Location: {barber.city}, {barber.state}</ListGroup.Item>
               {/* <ListGroup.Item className='listgroup list-group-item-dark'>Rating: {barber.ratings}/5</ListGroup.Item> */}
               <ListGroup.Item className='listgroup list-group-item-dark'>Contact: {barber.contact}</ListGroup.Item>
-              <ListGroup.Item className='listgroup list-group-item-dark'>Book an appointment: <a rel="noreferrer" target="_blank" href={barber.website == "N/A" ? null : 'https://' + barber.website}>{barber.website}</a></ListGroup.Item>
+              <ListGroup.Item className='listgroup list-group-item-dark'>Book an appointment: <a rel="noreferrer" target="_blank" href={barber.website === "N/A" ? null : 'https://' + barber.website}>{barber.website}</a></ListGroup.Item>
             </ListGroup>
           </Card>
         </div>
