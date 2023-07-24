@@ -1,19 +1,107 @@
-import React, { useEffect, useState } from 'react'
-import { getBarber } from './api/homepage'
+import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup';
 
 function HomePage(accessToken) {
-  const [database, setDatabase] = useState([])
+  const [database, setDatabase] = useState([
+    {
+        "name": "Christian Alverez",
+        "state": "California",
+        "city": "Corona",
+        "ratings": [
+            5
+        ],
+        "price": "35",
+        "description": "Experience the finest haircuts and grooming services at my barber shop. With over 10 years of experience and a passion for precision, I guarantee you'll leave feeling and looking your best.",
+        "profile_image": "https://i.imgur.com/6sLGAwr.png",
+        "haircut_images": [
+            "https://i.imgur.com/HUhWDGM.png",
+            "https://i.imgur.com/KIwHkr2.png",
+            "https://i.imgur.com/VnEXZgA.png",
+            "https://i.imgur.com/WYP7Pc5.png"
+        ],
+        "contact": "(951) 666-1963",
+        "website": "imnxt.pro/Chrisstheebarber"
+    },
+    {
+        "name": "Ashton Vilchiz",
+        "state": "California",
+        "city": "Corona",
+        "ratings": [
+            5
+        ],
+        "price": "35",
+        "description": "Experience the ultimate in personal grooming with a private barber. With a dedicated stylist and top-notch equipment, you'll receive individualized attention and a custom-tailored haircut.",
+        "profile_image": "https://i.imgur.com/Eji3LyP.png",
+        "haircut_images": [
+            "https://i.imgur.com/4U3APR9.png",
+            "https://i.imgur.com/ztZu9qE.png",
+            "https://i.imgur.com/sXDdwAA.png",
+            "https://i.imgur.com/c48iPaL.png"
+        ],
+        "contact": "(951) 666-1963",
+        "website": "https://www.instagram.com/223_thegoon/"
+    },
+    {
+        "name": "Cameron Caughan",
+        "state": "California",
+        "city": "Corona",
+        "ratings": [
+            5
+        ],
+        "price": "35",
+        "description": "Experience the ultimate barbering services with a personal barber in our shop. Receive individualized attention and personalized cuts in a professional and relaxed setting.",
+        "profile_image": "https://i.imgur.com/IS8zr4m.png",
+        "haircut_images": [
+            "https://i.imgur.com/RTLHaQ9.png",
+            "https://i.imgur.com/i25RyoT.png",
+            "https://i.imgur.com/w6PG8JT.png",
+            "https://i.imgur.com/eeQ99B8.png"
+        ],
+        "contact": "(951) 666-1963",
+        "website": "https://www.instagram.com/sensei_fadez/"
+    },
+    {
+        "name": "Jonathan Covvarrubias",
+        "state": "California",
+        "city": "Corona",
+        "ratings": [
+            5
+        ],
+        "price": "35",
+        "description": "Discover the art of grooming with a professional barber who understands the importance of a great haircut. With years of experience and a passion for making you look your best, I offer a personalized touch and a keen eye for detail. Trust me to keep you looking sharp and stylish, every time.",
+        "profile_image": "https://i.imgur.com/9IOMx7a.png",
+        "haircut_images": [
+            "https://i.imgur.com/M2NeVsY.png",
+            "https://i.imgur.com/OEUfHPR.png",
+            "https://i.imgur.com/2yftDrM.png",
+            "https://i.imgur.com/WCmbl4z.png"
+        ],
+        "contact": "(951) 666-1963",
+        "website": "thefastbarber.booksy.com"
+    },
+    {
+        "name": "Andrew Rameriz",
+        "state": "California",
+        "city": "Corona",
+        "ratings": [
+            5
+        ],
+        "price": "35",
+        "description": "Experience the ultimate grooming experience with your own personal barber. From head-to-toe, I'll take care of all your grooming needs with personalized attention and top-notch products.",
+        "profile_image": "https://i.imgur.com/6i0v8ua.png",
+        "haircut_images": [
+            "https://i.imgur.com/wJmQa1R.png",
+            "https://i.imgur.com/P7nqcaf.png",
+            "https://i.imgur.com/7nn76wi.png",
+            "https://i.imgur.com/vj8lXr3.png"
+        ],
+        "contact": "(951) 666-1963",
+        "website": "andrew1of1.booksy.com"
+    }
+])
   const [images, setImages] = useState(Array(100).fill(0))
-
-  const getDatabase = () => {
-    getBarber(accessToken)
-      .then((data) => {
-        setDatabase(data)
-      })
-  }
 
   const nextImage = (imageArrayLength, index) => {
     let copyImages = [...images]
@@ -22,16 +110,6 @@ function HomePage(accessToken) {
       copyImages[index] = 0
     }
     setImages(copyImages)
-  }
-
-  useEffect(() => {
-    getDatabase()
-  }, )
-
-  if (database.length <= 0) {
-    return (
-      <h2>Loading Barbers...</h2>
-    )
   }
 
   const renderBarbers = () => {
