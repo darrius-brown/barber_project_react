@@ -71,12 +71,5 @@
     max-height: 100px;
   }
 
-  .bg-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; /* Adjust background size to cover the element */
-    height: 250px; /* Set the height to control the size of the background image */
-  }
 }
 
