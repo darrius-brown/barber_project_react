@@ -46,4 +46,30 @@
   background-attachment: fixed;
 }
 
+@media (max-width: 767px) {
+  .barber {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .barber-card {
+    margin-bottom: 20px;
+  }
+
+  .barber-info {
+    width: 100%;
+    margin: 0;
+  }
+
+  .barber-cut {
+    width: 100%;
+    height: auto;
+  }
+
+  .barber-img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
 
